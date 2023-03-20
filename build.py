@@ -17,7 +17,7 @@
 #
 
 """
-Script to build libarchive for RACE
+Script to build sodium for RACE
 """
 
 import logging
