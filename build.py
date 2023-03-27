@@ -59,6 +59,9 @@ if __name__ == "__main__":
     source_dir = os.path.join(args.source_dir, f"libsodium-{args.version}")
     env = builder.create_standard_envvars(args)
 
+    # doesn't build correctly when LD=llvm-ld
+    del env["LD"]
+
     logging.root.info("Configuring build")
     builder.execute(
         args,
